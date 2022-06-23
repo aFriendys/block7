@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "TT Lakes";
+    src: url("../fonts/TTLakes-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "TT Lakes";
+    font-weight: 500;
+    src: url("../fonts/TTLakes-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "TT Lakes";
+    font-weight: 700;
+    src: url("../fonts/TTLakes-Bold.woff") format("woff");
+}
+
+
+$background-color-1: #fff;
+$background-color-2: #F8F8F8;
+$background-color-3: #ff3e79;
+
+$bullet-color-1: #DDDDDD;
+$bullet-color-2: #B5B6BC;
+
+
+
+$decoration-color-1: #eaeaea;
+$decoration-color-2: #41f6d7;
+$decoration-color-3: #ff3e79;
+$text-decoration-color-1: #7e7e82;
+$icon-color: #ff3e79;
+$text-color-1: #b5b6bc;
+$text-color-2: #7e7e82;
+$text-color-3: #ff3e79;
+$text-color-4: #fff;
+$element-decoration-color-1: #eaeaea;
+$shadow: #0e185030;
+

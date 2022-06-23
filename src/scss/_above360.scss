@@ -1,0 +1,30 @@
+@media screen and (min-width: 360px) {
+    .header {
+        &__icon-wrapper {
+            &:first-of-type {
+                &::after {
+                    content: "";
+                    height: 32px;
+                    width: 2px;
+                    background-color: $decoration-color-1;
+                    border-radius: 1px;
+                    margin-left: 12px;
+                    margin-right: 20px;
+                    align-self: center;
+                }
+            }
+        }
+    }
+    .menu{
+        max-width: 320px;
+        padding: 0 16px;
+        }
+    
+        .navigation{
+            &__link{
+                &::before{
+                    left: -20px;
+                }
+            }
+        }
+}

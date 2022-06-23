@@ -1,0 +1,107 @@
+.menu {
+  transition:  all .75s ease-in-out;
+  padding: 0 8px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 360px;
+  height: 100%;
+  display: flex;
+  background-color: $background-color-1;
+  flex-direction: column;
+  transform: translateX(-100%);
+  opacity: 0.25;
+  z-index: 4;
+  &__header {
+    display: flex;
+    align-items: center;
+    height: 88px;
+  }
+
+  &--active{
+    transition: .75s all .25s ease-in-out;
+    transform: translateX(0);
+    opacity: 1;
+    box-shadow: 16px 0 52px 0px $shadow;
+  }
+}
+
+.navigation {  
+  flex-grow: 1; 
+
+  &__link {
+    padding: calc(12px - 0.25em) 8px;
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    cursor: pointer;
+    margin: 0;
+ 
+    &::before {
+      transition: background-color 1s ease;
+      position: absolute;
+      content: "";
+      background-color: $background-color-1;
+      border-radius: 4px;
+      height: 100%;
+      width: 8px;
+      height: 32px;
+      left: -12px;
+      top: 4px;
+    }
+
+    &:first-of-type {
+      margin-top: 10px;
+    }
+
+    &--active {
+      color: $text-decoration-color-1;
+      transition: all .5s ease;
+
+      &::before{
+        background-color: $decoration-color-2;
+      }
+    }
+  }
+}
+
+address {
+  font-style: normal;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: black;
+}
+
+.contacts {
+  font-style: normal;
+  
+  margin: 0 8px;
+  margin-top: 8px;
+
+  &__mail {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__phone {
+    margin-top: 12px;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+  }
+}
+
+.language-select {
+  margin: 8px;
+  margin-bottom: 32px;
+  &__language--active {
+    color: $text-decoration-color-1;
+    transition: color .5s ease;
+  }
+}

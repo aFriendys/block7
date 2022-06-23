@@ -1,0 +1,92 @@
+@media screen and (min-width: 1366px) {
+    .repair-info{
+        &__header{
+            h2{
+                padding: 16px 32px;
+            }
+            
+        }
+        &__offer-notice{
+            margin: 0 32px;
+        }
+    }
+    .overlay {
+        z-index: 1;
+    }
+    .navigation__link::before {
+        left: -28px;
+    }
+    .swiper {
+        padding: 24px 32px 8px;
+    }
+    .additional-info{
+        margin: 24px 24px 16px;
+        &__list{
+        flex-wrap: wrap;
+        }
+    }
+    .header {
+        display: none;
+    }
+
+    .about {
+        &__image {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+    }
+
+    .main-content {
+        margin-top: 12px;
+        overflow-x: auto;
+
+    }
+
+    .page {
+        flex-direction: row !important;
+        overflow: hidden;
+    }
+
+    .menu {
+        margin: 0;
+        position: relative;
+        opacity: 1;
+        box-shadow: unset;
+        transform: unset;
+        z-index: 0;
+        padding: 12px 24px;
+
+        &__header {
+            .icons-wrapper:first-of-type {
+                display: none;
+            }
+        }
+    }
+
+    .modal {
+        right: -520px;
+        top: 0;
+        left: unset;
+        height: 100%;
+        width: 440px;
+
+        &--active {
+            right: 0;
+        }
+        .icon:first-child {
+            position: absolute;
+            margin-top: 36px;
+            margin-left: -76px;
+        }
+    }
+
+    .form{
+        margin-top: 40px;
+    }
+    
+
+
+}
