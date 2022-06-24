@@ -7,6 +7,7 @@
 .swiper-wrapper {
   padding-left: 16px;
   justify-content: space-between;
+  padding-top: 1px;
 
 }
 
@@ -50,6 +51,22 @@
   justify-content: space-between;
   padding: 8px;
   background-color: $background-color-1;
+  transition: all .75s ease;
+  user-select: none;
+  cursor: pointer;
+
+  &:hover{
+    border: 1px solid $decoration-color-2;
+    .button{
+        &:not(.icon--clear-background){
+          background-color: $decoration-color-2;
+          border: 1px solid $decoration-color-2;
+          }
+          &.icon--clear-background{
+              filter: invert(91%) sepia(44%) saturate(730%) hue-rotate(88deg) brightness(99%) contrast(96%);
+          }
+    }
+  }
 
   &__content {
     margin: 8px;

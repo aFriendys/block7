@@ -13,6 +13,7 @@
   opacity: 0.25;
   transform: translateX(100%);
   background-color: $background-color-1;
+  border-left: 1px solid #D9FFF5;
 
   &--active {
     transform: translateX(0);
@@ -35,6 +36,19 @@
   display: none;
   flex-direction: column;
   margin: 24px 16px;
+
+&:invalid{
+  .button{
+    opacity: .5;
+    cursor: not-allowed;
+
+    &:hover{
+      transition: unset;
+      background-color: #ff3e79;
+      border: unset;
+    }
+  }
+}
 
   &--active {
     display: flex;

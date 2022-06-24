@@ -30,8 +30,8 @@ for (var i = 0; i < dropdownButton.length; i++) {
   )
 }
 
-window.onload = function () {
-  if (window.matchMedia('(max-width: 767px)').matches) {
+window.onload =  () => {
+  if (window.matchMedia('(max-width: 767px)').matches) { 
     const swiper = new Swiper('.swiper', {
       direction: 'horizontal',
       loop: true,
