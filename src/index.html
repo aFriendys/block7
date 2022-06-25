@@ -1,10 +1,10 @@
-    <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>
         <%= htmlWebpackPlugin.options.title %>
@@ -69,14 +69,16 @@
                 </div>
             </header>
             <nav class="navigation" id="nav">
-                <ul class="navigation__link"><a href='#'>Ремонт техники</a></ul>
-                <ul class="navigation__link navigation__link--active"><a href='#'>Услуги и сервисы</a></ul>
-                <ul class="navigation__link"><a href='#'>Корпоративным клиентам</a></ul>
-                <ul class="navigation__link"><a href='#'>Продавцам техники</a></ul>
-                <ul class="navigation__link"><a href='#'>Партнерам</a></ul>
-                <ul class="navigation__link"><a href='#'>Производителям</a></ul>
-                <ul class="navigation__link"><a href='#'>Наши сервисные центры</a></ul>
-                <ul class="navigation__link"><a href='#'>Контакты</a></ul>
+                <ul>
+                <li class="navigation__link">Ремонт техники</li>
+                <li class="navigation__link navigation__link--active">Услуги и сервисы</li>
+                <li class="navigation__link">Корпоративным клиентам</li>
+                <li class="navigation__link">Продавцам техники</li>
+                <li class="navigation__link">Партнерам</li>
+                <li class="navigation__link">Производителям</li>
+                <li class="navigation__link">Наши сервисные центры</li>
+                <li class="navigation__link">Контакты</li>
+            </ul>
             </nav>
             <footer class="menu__footer">
                 <div class="icons-wrapper">
@@ -92,7 +94,7 @@
                 </div>
                 <address class="contacts">
                     <div class="contacts__mail"><a class="contacts__mail" href="mailto:mail@cps.com">mail@cps.com</a></div>
-                    <div class="contacts__phone"><a class="contacts__phone" href="tel:88008908900">8 800 890 8900<a></div>
+                    <div class="contacts__phone"><a class="contacts__phone" href="tel:88008908900">8 800 890 8900</a></div>
                 </address>
                 <aside class="language-select">
                     <a class="language-select__language language-select__language--active" href="#">RU</a>
@@ -345,9 +347,7 @@
                         <div class="card__button">
                             <button class="button">
                                 <span class="button__value">Заказать</span>
-                                <div class="icon icon--small icon--clear-background">
-                                    <img src="./img/icons/dropdown.svg" alt=">">
-                                </div>
+                                <img class="icon icon--small icon--clear-background" src="./img/icons/dropdown.svg" alt=">">
                             </button>
                         </div>
                     </article>
@@ -373,9 +373,7 @@
                         <div class="card__button">
                             <button class="button">
                                 <span class="button__value">Заказать</span>
-                                <div class="icon icon--small icon--clear-background">
-                                    <img src="./img/icons/dropdown.svg" alt=">">
-                                </div>
+                                <img class="icon icon--small icon--clear-background" src="./img/icons/dropdown.svg" alt=">">
                             </button>
                         </div>
                     </article>
@@ -401,9 +399,7 @@
                         <div class="card__button">
                             <button class="button">
                                 <span class="button__value">Заказать</span>
-                                <div class="icon icon--small icon--clear-background">
-                                    <img src="./img/icons/dropdown.svg" alt=">">
-                                </div>
+                                <img class="icon icon--small icon--clear-background" src="./img/icons/dropdown.svg" alt=">">
                             </button>
                         </div>
                     </article>
@@ -429,9 +425,7 @@
                         <div class="card__button">
                             <button class="button">
                                 <span class="button__value">Заказать</span>
-                                <div class="icon icon--small icon--clear-background">
-                                    <img src="./img/icons/dropdown.svg" alt=">">
-                                </div>
+                                <img class="icon icon--small icon--clear-background" src="./img/icons/dropdown.svg" alt=">">
                             </button>
                         </div>
                     </article>
@@ -457,9 +451,7 @@
                         <div class="card__button">
                             <button class="button">
                                 <span class="button__value">Заказать</span>
-                                <div class="icon icon--small icon--clear-background">
-                                    <img src="./img/icons/dropdown.svg" alt=">">
-                                </div>
+                                <img class="icon icon--small icon--clear-background" src="./img/icons/dropdown.svg" alt=">">
                             </button>
                         </div>
                     </article>
@@ -500,9 +492,7 @@
                         данных</a> и соглашаетесь с нашей <a href="#">политикой конфиденциальности</a></p>
                 <button type="submit" form="feedback-message" class="button">
                     <span class="button__value">Отправить</span>
-                    <div class="icon icon--small icon--clear-background">
-                        <img src="././img/icons/dropdown.svg" alt=">">
-                    </div>
+                    <img class="icon icon--small icon--clear-background" src="./img/icons/dropdown.svg" alt=">">
                 </button>
             </form>
             <form class="form" id="request-call" action="#">
@@ -512,9 +502,7 @@
                         данных</a> и соглашаетесь с нашей <a href="#">политикой конфиденциальности</a></p>
                 <button type="submit" form="request-call" class="button">
                     <span class="button__value">Отправить</span>
-                    <div class="icon icon--small icon--clear-background">
-                        <img src="./img/icons/dropdown.svg" alt=">">
-                    </div>
+                    <img class="icon icon--small icon--clear-background" src="./img/icons/dropdown.svg" alt=">">
                 </button>
             </form>
         </aside>

@@ -104,7 +104,6 @@ for (var i = 0; i < icons.length; i++) {
 }
 
 function forceAction(action, modalType) {
-  console.log(modalType)
   switch (action) {
     case 'open menu':
       menu.classList.add('menu--active')
@@ -160,7 +159,6 @@ window.addEventListener(
 function toggleHeight(button, block, blockHeight, hiddenBlockHeight) {
   const innerText = button.innerHTML
   button.addEventListener('click', (e) => {
-    console.log(innerText)
     e.target.classList.toggle('dropdown--active')
     if (e.target.classList.contains('dropdown--active')) {
       block.style.height = blockHeight + 'px'

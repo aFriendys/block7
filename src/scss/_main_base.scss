@@ -6,7 +6,6 @@
     transition: all 1s ease;
     margin-top: 16px;
     overflow: hidden;
-    color: #1b1c21;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.2px;
@@ -30,20 +29,18 @@
       height: 32px;
       left: -20px;
       top: 4px;
-      background-color: $decoration-color-2;
+      background-color: $decoration-color-1;
     }
     h1 {
       font-size: 28px;
       line-height: 40px;
       letter-spacing: -0.6px;
-      color: #1b1c21;
     }
 
     h2 {
       font-size: 16px;
       line-height: 24px;
       letter-spacing: -0.2px;
-      color: #7e7e82;
       font-weight: normal;
     }
   }
@@ -55,7 +52,7 @@
 
   &__paragraph,
   &__link {
-    color: #7e7e82;
+    color: $text-color-2;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.2px;
@@ -98,8 +95,8 @@
   &__header {
     margin-left: unset;
     width: 100%;
-    border-top: 1px solid #D9FFF5;
-    background: linear-gradient(to left, $background-color-1, $background-color-2);
+    border-top: 1px solid $decoration-color-2;
+    background: linear-gradient(to right, $background-color-1, $background-color-2);
 
     h2 {
       padding: 16px;
@@ -117,7 +114,6 @@
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
-    color: #1b1c21;
     letter-spacing: -0.2px;
     user-select: none;
     cursor: pointer;
@@ -125,7 +121,7 @@
     &::after {
       content: '>';
       display: inline-block;
-      color: #ff3e79;
+      color: $icon-color-1;
       margin-left: 10px;
       transform: scale(0.8, 1.8) translateY(-1px);
       font-weight: 500;
@@ -140,14 +136,14 @@
   margin: 8px;
   height: 40px;
   width: 40px;
-  background-color: $background-color-3;
+  background-color: $icon-color-1;
   border-radius: 50%;
   user-select: none;
   cursor: pointer;
   
   &--small {
-    height: 24px;
-    width: 24px;
+    height: 12px;
+    width: 12px;
   }
 
   &--logo {
@@ -165,7 +161,7 @@
   }
 
   &--border{
-    border: 2px solid $decoration-color-3;
+    border: 2px solid $decoration-color-4;
 
     img{
       filter:invert(43%) sepia(28%) saturate(7486%) hue-rotate(319deg) brightness(101%) contrast(101%);;

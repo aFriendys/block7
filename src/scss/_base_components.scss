@@ -9,7 +9,7 @@
     background-color: $background-color-3;
     font-size: 20px;
     font-weight: bold;
-    color: $background-color-1;
+    color: $text-color-3;
     transform: translateY(100%);
     opacity: .3;
     transition: all .5s;
@@ -24,7 +24,7 @@
 
 .additional-info {
     margin: 24px 16px 0;
-    color: #7e7e82;
+    color: $text-color-2;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
@@ -46,9 +46,9 @@
         padding: 8px 22px;
 
         &:hover {
-            outline: 1px solid $decoration-color-2;
+            outline: 1px solid $decoration-color-3;
             border-radius: 6px;
-            background-color: $background-color-1;
+            background-color: $background-color-2;
         }
     }
 }
@@ -58,7 +58,6 @@
     margin-left: 8px;
     user-select: none;
     cursor: pointer;
-    color: #1B1C21;
     letter-spacing: -0.2px;
     font-style: normal;
 font-weight: 500;
@@ -86,13 +85,13 @@ line-height: 24px;
 .button {
     padding: 0;
     transition: all .25s ease;
-    background-color: $background-color-3;
+    background-color: $button-color-1;
     height: 32px;
     width: 136px;
     border: unset;
     border-radius: 16px;
     text-transform: uppercase;
-    color: $text-color-4;
+    color: $text-color-3;
     font-weight: bold;
     font-size: 12px;
     line-height: 24px;
@@ -104,8 +103,8 @@ line-height: 24px;
     &:focus {
         
         &:not(.icon--clear-background){
-        background-color: $decoration-color-2;
-        border: 1px solid $decoration-color-2;
+        background-color: $icon-color-1;
+        border: 1px solid $decoration-color-4;
         }
         &.icon--clear-background{
             filter: invert(91%) sepia(44%) saturate(730%) hue-rotate(88deg) brightness(99%) contrast(96%);
@@ -121,7 +120,7 @@ line-height: 24px;
     right: 0;
     bottom: 0;
     opacity: 0;
-    background-color: $background-color-1;
+    background-color: $background-color-2;
     transition: all .75s ease-in-out;
     pointer-events: none;
     z-index: 3;
@@ -138,7 +137,8 @@ line-height: 24px;
     position: relative;
     height: 100vh;
     width: 100%;
-    background-color: $background-color-2;
+    background-color: $background-color-1;
+    color: $text-color-1;
     overflow-x: hidden;
     overflow-y: auto;
     display: flex;
@@ -148,6 +148,7 @@ line-height: 24px;
       display: unset;
     }
   }
+
 
 
   *,
