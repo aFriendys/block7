@@ -103,8 +103,8 @@ line-height: 24px;
     &:focus {
         
         &:not(.icon--clear-background){
-        background-color: $icon-color-1;
-        border: 1px solid $decoration-color-4;
+        background-color: $button-color-2;
+        border: 1px solid $decoration-color-1;
         }
         &.icon--clear-background{
             filter: invert(91%) sepia(44%) saturate(730%) hue-rotate(88deg) brightness(99%) contrast(96%);

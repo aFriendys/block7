@@ -17,9 +17,25 @@
   }
 
   &__header {
+    display: flex;
+    justify-content: space-between;
     margin: 24px 16px 0;
     font-family: 'TT Lakes';
     position: relative;
+
+&-icons{
+  margin-right: 8px;
+  display: none;
+  align-items: center;
+}
+
+&-description{
+  margin-left: 24px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
     &:not(.repair-info__header)::before {
       position: absolute;
       content: '';
@@ -35,6 +51,7 @@
       font-size: 28px;
       line-height: 40px;
       letter-spacing: -0.6px;
+      flex: 1;
     }
 
     h2 {

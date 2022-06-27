@@ -48,6 +48,13 @@
         margin-top: 12px;
         overflow-x: auto;
 
+&__header{
+    &-icons{
+        display: flex;
+    }
+}
+
+
     }
 
     .page {
