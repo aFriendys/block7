@@ -30,8 +30,8 @@ for (var i = 0; i < dropdownButton.length; i++) {
   )
 }
 
-window.onload =  () => {
-  if (window.matchMedia('(max-width: 767px)').matches) { 
+window.onload = () => {
+  if (window.matchMedia('(max-width: 767px)').matches) {
     const swiper = new Swiper('.swiper', {
       direction: 'horizontal',
       spaceBetween: 20,
@@ -95,10 +95,7 @@ var icons = document.getElementsByClassName('icon')
 for (var i = 0; i < icons.length; i++) {
   if (icons[i].dataset.forceaction != undefined) {
     icons[i].addEventListener('click', (e) => {
-      forceAction(
-        e.target.dataset.forceaction,
-        e.target.dataset.modaltype
-      )
+      forceAction(e.target.dataset.forceaction, e.target.dataset.modaltype)
     })
   }
 }
@@ -133,7 +130,7 @@ function forceAction(action, modalType) {
       menu.classList.remove('menu--active')
       modal.classList.remove('modal--active')
       overlay.classList.remove('overlay--active')
-  } 
+  }
 }
 
 window.addEventListener(

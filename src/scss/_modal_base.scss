@@ -1,7 +1,7 @@
 .modal {
   z-index: 4;
   box-shadow: -16px 0 52px 0px $shadow;
-  transition: all .75s ease-in-out;
+  transition: all 0.75s ease-in-out;
   position: fixed;
   max-width: 440px;
   top: 0;
@@ -18,7 +18,7 @@
   &--active {
     transform: translateX(0);
     opacity: 1;
-    transition: .75s all .25s ease-in-out;
+    transition: 0.75s all 0.25s ease-in-out;
   }
 
   .icon:first-of-type {
@@ -36,18 +36,18 @@
   flex-direction: column;
   margin: 24px 16px;
 
-&:invalid{
-  .button{
-    opacity: .5;
-    cursor: not-allowed;
+  &:invalid {
+    .button {
+      opacity: 0.5;
+      cursor: not-allowed;
 
-    &:hover{
-      transition: unset;
-      background-color: $button-color-2;
-      border: unset;
+      &:hover {
+        transition: unset;
+        background-color: $button-color-2;
+        border: unset;
+      }
     }
   }
-}
 
   &--active {
     display: flex;
@@ -60,7 +60,7 @@
 
     &::before {
       position: absolute;
-      content: "";
+      content: '';
       height: 40px;
       width: 3px;
       margin: auto -16px;
@@ -103,8 +103,6 @@
       outline: unset;
       transition: all 1s ease;
     }
-
-
   }
 
   &__agreements {

@@ -1,156 +1,154 @@
 .warning {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    z-index: 9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $background-color-3;
-    font-size: 20px;
-    font-weight: bold;
-    color: $text-color-3;
-    transform: translateY(100%);
-    opacity: .3;
-    transition: all .5s;
-    text-align: center;
-    padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $background-color-3;
+  font-size: 20px;
+  font-weight: bold;
+  color: $text-color-3;
+  transform: translateY(100%);
+  opacity: 0.3;
+  transition: all 0.5s;
+  text-align: center;
+  padding: 10px;
 
-    &--active {
-        transform: translate(0);
-        opacity: 1;
-    }
+  &--active {
+    transform: translate(0);
+    opacity: 1;
+  }
 }
 
 .additional-info {
-    overflow: auto;
-    margin: 24px 16px 0;
-    color: $text-color-2;
+  overflow: auto;
+  margin: 24px 16px 0;
+  color: $text-color-2;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+
+  &__list {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__list-item {
+    user-select: none;
+    cursor: pointer;
+    display: inline-block;
+    white-space: nowrap;
     font-size: 16px;
     line-height: 24px;
-    letter-spacing: -0.2px;
+    transition: all 0.75s ease;
+    padding: 8px 22px;
 
-    &__list {
-        padding: 0;
-        display: flex;
-        flex-direction: row;
+    &:hover {
+      outline: 1px solid $decoration-color-3;
+      border-radius: 6px;
+      background-color: $background-color-2;
     }
-
-    &__list-item {
-        user-select: none;
-        cursor: pointer;
-        display: inline-block;
-        white-space: nowrap;
-        font-size: 16px;
-        line-height: 24px;
-        transition: all .75s ease;
-        padding: 8px 22px;
-
-        &:hover {
-            outline: 1px solid $decoration-color-3;
-            border-radius: 6px;
-            background-color: $background-color-2;
-        }
-    }
+  }
 }
 
 .dropdown {
-    display: none;
-    margin-left: 8px;
-    user-select: none;
-    cursor: pointer;
-    letter-spacing: -0.2px;
-    font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 24px;
+  display: none;
+  margin-left: 8px;
+  user-select: none;
+  cursor: pointer;
+  letter-spacing: -0.2px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
 
+  &::before {
+    transition: all 1s ease;
+    content: '';
+    width: 8px;
+    height: 12px;
+    margin-right: 16px;
+    background: url('../img/icons/dropdown-small.svg') 50% no-repeat;
+    overflow: hidden;
+    display: inline-block;
+  }
+
+  &--active {
     &::before {
-        transition: all 1s ease;
-        content: "";
-        width: 8px;
-        height: 12px;
-        margin-right: 16px;
-        background: url("../img/icons/dropdown-small.svg") 50% no-repeat;
-        overflow: hidden;
-        display: inline-block;
+      transform: scaleY(-1);
     }
-
-    &--active {
-        &::before {
-            transform: scaleY(-1);
-        }
-    }
+  }
 }
 
 .button {
-    padding: 0;
-    transition: all .25s ease;
-    background-color: $button-color-1;
-    height: 32px;
-    width: 136px;
-    border: unset;
-    border-radius: 16px;
-    text-transform: uppercase;
-    color: $text-color-3;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    transition: all .75s ease;
-    &:hover,
-    &:focus {
-        
-        &:not(.icon--clear-background){
-        background-color: $button-color-2;
-        border: 1px solid $decoration-color-1;
-        }
-        &.icon--clear-background{
-            filter: invert(91%) sepia(44%) saturate(730%) hue-rotate(88deg) brightness(99%) contrast(96%);
-        }
+  padding: 0;
+  transition: all 0.25s ease;
+  background-color: $button-color-1;
+  height: 32px;
+  width: 136px;
+  border: unset;
+  border-radius: 16px;
+  text-transform: uppercase;
+  color: $text-color-3;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: all 0.75s ease;
+  &:hover,
+  &:focus {
+    &:not(.icon--clear-background) {
+      background-color: $button-color-2;
+      border: 1px solid $decoration-color-1;
     }
+    &.icon--clear-background {
+      filter: invert(91%) sepia(44%) saturate(730%) hue-rotate(88deg)
+        brightness(99%) contrast(96%);
+    }
+  }
 }
 
 .overlay {
-    cursor: pointer;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    background-color: $background-color-2;
-    transition: all .75s ease-in-out;
-    pointer-events: none;
-    z-index: 3;
-  
-    &--active {
-      transition: all .75s ease-in-out;
-      opacity: .9;
-      pointer-events: all;
-    }
+  cursor: pointer;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  background-color: $background-color-2;
+  transition: all 0.75s ease-in-out;
+  pointer-events: none;
+  z-index: 3;
+
+  &--active {
+    transition: all 0.75s ease-in-out;
+    opacity: 0.9;
+    pointer-events: all;
   }
+}
 
-  .page{
-    font-family: "TT Lakes", sans-serif;
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    background-color: $background-color-1;
-    color: $text-color-1;
-    overflow-x: hidden;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-  
-    :first-child .dropdown{
-      display: unset;
-    }
+.page {
+  font-family: 'TT Lakes', sans-serif;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: $background-color-1;
+  color: $text-color-1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+
+  :first-child .dropdown {
+    display: unset;
   }
-
-
+}
 
 *,
 *::before,
@@ -158,6 +156,9 @@ line-height: 24px;
   box-sizing: border-box;
 }
 
-h1,h2,h3,h4{
-    margin: 0;
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
 }

@@ -1,5 +1,5 @@
 .menu {
-  transition:  all .75s ease-in-out;
+  transition: all 0.75s ease-in-out;
   padding: 0 8px;
   position: fixed;
   left: 0;
@@ -21,19 +21,19 @@
     height: 88px;
   }
 
-  &--active{
-    transition: .75s all .25s ease-in-out;
+  &--active {
+    transition: 0.75s all 0.25s ease-in-out;
     transform: translateX(0);
     opacity: 1;
     box-shadow: 16px 0 52px 0px $shadow;
   }
 }
 
-.navigation {  
+.navigation {
   margin-top: 10px;
-  flex-grow: 1; 
+  flex-grow: 1;
 
-  ul{
+  ul {
     padding: 0;
   }
   &__link {
@@ -46,16 +46,14 @@
     margin: 0;
     user-select: none;
     color: $text-color-1;
- 
 
-    &:hover:not(&--active){
-      &::after{
+    &:hover:not(&--active) {
+      &::after {
         opacity: 1;
       }
-
     }
-    &::after{
-      transition: all .75s ease;
+    &::after {
+      transition: all 0.75s ease;
       content: '>';
       position: absolute;
       color: $icon-color-1;
@@ -67,7 +65,7 @@
     &::before {
       transition: all 1s ease;
       position: absolute;
-      content: "";
+      content: '';
       background-color: unset;
       border-radius: 4px;
       height: 100%;
@@ -79,9 +77,9 @@
 
     &--active {
       color: $text-color-2;
-      transition: all .5s ease;
+      transition: all 0.5s ease;
 
-      &::before{
+      &::before {
         background-color: $decoration-color-1;
       }
     }
@@ -100,7 +98,7 @@ a {
 
 .contacts {
   font-style: normal;
-  
+
   margin: 0 8px;
   margin-top: 8px;
 
@@ -122,6 +120,6 @@ a {
   margin-bottom: 32px;
   &__language--active {
     color: $text-color-2;
-    transition: all .75s ease;
+    transition: all 0.75s ease;
   }
 }

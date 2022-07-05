@@ -1,42 +1,42 @@
 @font-face {
-    font-family: "TT Lakes";
-    src: url("../fonts/TTLakes-Regular.woff") format("woff");
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Regular.woff') format('woff');
 }
 
 @font-face {
-    font-family: "TT Lakes";
-    font-weight: 500;
-    src: url("../fonts/TTLakes-Medium.woff") format("woff");
+  font-family: 'TT Lakes';
+  font-weight: 500;
+  src: url('../fonts/TTLakes-Medium.woff') format('woff');
 }
 
 @font-face {
-    font-family: "TT Lakes";
-    font-weight: 700;
-    src: url("../fonts/TTLakes-Bold.woff") format("woff");
+  font-family: 'TT Lakes';
+  font-weight: 700;
+  src: url('../fonts/TTLakes-Bold.woff') format('woff');
 }
 
 $shadow: #0e185030;
 
-$text-color-1: #1B1C21; 
-$text-color-2: #7E7E82;
-$text-color-3: #FFF;
-$text-color-4: #B5B6BC;
-$text-color-5: #FF3E79;
+$text-color-1: #1b1c21;
+$text-color-2: #7e7e82;
+$text-color-3: #fff;
+$text-color-4: #b5b6bc;
+$text-color-5: #ff3e79;
 
-$decoration-color-1: #41F6D7; 
-$decoration-color-2: #D9FFF5; 
-$decoration-color-3: #B8FFEC; 
-$decoration-color-4: #FF3E79; 
-$decoration-color-5: #EAEAEA; 
+$decoration-color-1: #41f6d7;
+$decoration-color-2: #d9fff5;
+$decoration-color-3: #b8ffec;
+$decoration-color-4: #ff3e79;
+$decoration-color-5: #eaeaea;
 
-$button-color-1: #FF3E79; 
-$button-color-2: #41F6D7; 
+$button-color-1: #ff3e79;
+$button-color-2: #41f6d7;
 
-$background-color-1: #F8F8F8;
-$background-color-2: #FFF;
-$background-color-3: #FF3E79;
+$background-color-1: #f8f8f8;
+$background-color-2: #fff;
+$background-color-3: #ff3e79;
 
-$bullet-color-1: #DDDDDD;
-$bullet-color-2: #B5B6BC;
+$bullet-color-1: #dddddd;
+$bullet-color-2: #b5b6bc;
 
-$icon-color-1: #FF3E79;
+$icon-color-1: #ff3e79;

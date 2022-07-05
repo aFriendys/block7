@@ -1,5 +1,5 @@
 .swiper {
-  margin-top : 16px;
+  margin-top: 16px;
   padding-left: 16px;
   height: auto;
   width: 100%;
@@ -50,20 +50,21 @@
   align-items: center;
   justify-content: space-between;
   padding: 8px;
-  transition: all .75s ease;
+  transition: all 0.75s ease;
   user-select: none;
   cursor: pointer;
 
-  &:hover{
+  &:hover {
     border: 1px solid $button-color-2;
-    .button{
-        &:not(.icon--clear-background){
-          background-color: $button-color-2;
-          border: 1px solid $button-color-2;
-          }
-          &.icon--clear-background{
-              filter: invert(91%) sepia(44%) saturate(730%) hue-rotate(88deg) brightness(99%) contrast(96%);
-          }
+    .button {
+      &:not(.icon--clear-background) {
+        background-color: $button-color-2;
+        border: 1px solid $button-color-2;
+      }
+      &.icon--clear-background {
+        filter: invert(91%) sepia(44%) saturate(730%) hue-rotate(88deg)
+          brightness(99%) contrast(96%);
+      }
     }
   }
 

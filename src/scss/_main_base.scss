@@ -23,18 +23,17 @@
     font-family: 'TT Lakes';
     position: relative;
 
-&-icons{
-  margin-right: 8px;
-  display: none;
-  align-items: center;
-}
+    &-icons {
+      margin-right: 8px;
+      display: none;
+      align-items: center;
+    }
 
-&-description{
-  margin-left: 24px;
-  font-weight: 500;
-  cursor: pointer;
-}
-
+    &-description {
+      margin-left: 24px;
+      font-weight: 500;
+      cursor: pointer;
+    }
 
     &:not(.repair-info__header)::before {
       position: absolute;
@@ -85,9 +84,8 @@
 
   .dropdown {
     margin: 16px 0;
-
   }
-  &__wrapper{
+  &__wrapper {
     margin: 8px 16px;
   }
   &__image {
@@ -116,7 +114,11 @@
     margin-left: unset;
     width: 100%;
     border-top: 1px solid $decoration-color-2;
-    background: linear-gradient(to right, $background-color-1, $background-color-2);
+    background: linear-gradient(
+      to right,
+      $background-color-1,
+      $background-color-2
+    );
 
     h2 {
       padding: 16px;
@@ -160,7 +162,7 @@
   border-radius: 50%;
   user-select: none;
   cursor: pointer;
-  
+
   &--small {
     height: 12px;
     width: 12px;
@@ -176,15 +178,16 @@
     height: unset;
   }
 
-  &--clear-background{
+  &--clear-background {
     background-color: unset;
   }
 
-  &--border{
+  &--border {
     border: 2px solid $decoration-color-4;
 
-    img{
-      filter:invert(43%) sepia(28%) saturate(7486%) hue-rotate(319deg) brightness(101%) contrast(101%);;
+    img {
+      filter: invert(43%) sepia(28%) saturate(7486%) hue-rotate(319deg)
+        brightness(101%) contrast(101%);
     }
   }
   img {
@@ -199,7 +202,3 @@
     flex-grow: 1;
   }
 }
-
-
-
-
