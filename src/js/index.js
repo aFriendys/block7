@@ -34,11 +34,11 @@ window.onload =  () => {
   if (window.matchMedia('(max-width: 767px)').matches) { 
     const swiper = new Swiper('.swiper', {
       direction: 'horizontal',
-      loop: true,
       spaceBetween: 20,
       slidesPerView: 'auto',
       pagination: {
-        el: '.swiper-pagination'
+        el: '.swiper-pagination',
+        clickable: true
       },
       init: true
     })
@@ -93,11 +93,11 @@ function switchSelectionLanguage(allElements, pickedElement) {
 var icons = document.getElementsByClassName('icon')
 
 for (var i = 0; i < icons.length; i++) {
-  if (icons[i].hasAttribute('forceaction')) {
+  if (icons[i].dataset.forceaction != undefined) {
     icons[i].addEventListener('click', (e) => {
       forceAction(
-        e.target.getAttribute('forceaction'),
-        e.target.getAttribute('modalType')
+        e.target.dataset.forceaction,
+        e.target.dataset.modaltype
       )
     })
   }

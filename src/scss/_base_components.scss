@@ -23,6 +23,7 @@
 }
 
 .additional-info {
+    overflow: auto;
     margin: 24px 16px 0;
     color: $text-color-2;
     font-size: 16px;
@@ -151,7 +152,7 @@ line-height: 24px;
 
 
 
-  *,
+*,
 *::before,
 *::after {
   box-sizing: border-box;

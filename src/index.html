@@ -18,7 +18,7 @@
         </aside>
         <header class="header">
             <div class="header__icon-wrapper  header__burger">
-                <button class="button icon" forceAction="open menu">
+                <button class="button icon" data-forceAction="open menu">
                     <img src="./img/icons/burger.svg" alt="burger">
                 </button>
             </div>
@@ -28,10 +28,10 @@
                 </div>
             </div>
             <div class="header__icon-wrapper header__contact">
-                <button class="button icon" forceAction="open modal" modalType="request call">
+                <button class="button icon" data-forceAction="open modal" data-modalType="request call">
                     <img src="./img/icons/phone.svg" alt="phone">
                 </button>
-                <button class="button icon" forceAction="open modal" modalType="feedback message">
+                <button class="button icon" data-forceAction="open modal" data-modalType="feedback message">
                     <img src="./img/icons/message.svg" alt="message">
                 </button>
                 <button class="button icon">
@@ -53,7 +53,7 @@
         <aside class="menu">
             <header class="menu__header">
                 <div class="icons-wrapper">
-                    <button class="button icon" forceAction="close menu">
+                    <button class="button icon" data-forceAction="close menu">
                         <img src="./img/icons/cancel.svg" alt="close">
                     </button>
                 </div>
@@ -82,10 +82,10 @@
             </nav>
             <footer class="menu__footer">
                 <div class="icons-wrapper">
-                    <button class="button icon" forceAction="open modal" modalType="request call">
+                    <button class="button icon" data-forceAction="open modal" data-modalType="request call">
                         <img src="./img/icons/phone.svg" alt="phone">
                     </button>
-                    <button class="button icon" forceAction="open modal" modalType="feedback message">
+                    <button class="button icon" data-forceAction="open modal" data-modalType="feedback message">
                         <img src="./img/icons/message.svg" alt="message">
                     </button>
                     <button class="button icon">
@@ -490,7 +490,7 @@
 
 
         <aside class="modal">
-            <button class="button icon" forceAction="close modal">
+            <button class="button icon" data-forceAction="close modal">
                 <img src="././img/icons/cancel.svg" alt=">">
             </button>
             <form class="form" id="feedback-message" action="#">

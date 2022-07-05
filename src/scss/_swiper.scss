@@ -1,14 +1,14 @@
 .swiper {
-  margin: 16px 0 0;
+  margin-top : 16px;
+  padding-left: 16px;
   height: auto;
   width: 100%;
 }
 
 .swiper-wrapper {
-  padding-left: 16px;
   justify-content: space-between;
+  box-sizing: border-box;
   padding-top: 1px;
-
 }
 
 .swiper-slide {
