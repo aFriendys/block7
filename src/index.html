@@ -1,665 +1,572 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title> <%= htmlWebpackPlugin.options.title %> </title>
-  </head>
 
-  <body>
-    <div class="page">
-      <aside class="warning">
-        <p>You can't expand menu or modal on resize</p>
-      </aside>
-      <header class="header">
-        <div class="header__icon-wrapper header__burger">
-          <button class="button icon" data-forceAction="open menu">
-            <img src="./img/icons/burger.svg" alt="burger" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+</head>
+
+<body>
+  <div class="page">
+    <aside class="warning">
+      <p>You can't expand menu or modal on resize</p>
+    </aside>
+    <header class="header">
+      <div class="header__icon-wrapper header__burger">
+        <button aria-label="Открыть меню" title="Открыть меню" class="button icon" data-forceAction="open menu">
+          <img src="./img/icons/burger.svg" alt="burger" />
+        </button>
+      </div>
+      <div class="header__icon-wrapper header__icon-wrapper--main-logo">
+        <div class="icon icon--logo icon--clear-background">
+          <img title="CPS Logo" src="./img/icons/logo.svg" alt="CPS Logo" />
+        </div>
+      </div>
+      <div class="header__icon-wrapper header__contact">
+        <button aria-label="Открыть модальное окно 'заказать звонок'" title="Заказать звонок" class="button icon"
+          data-forceAction="open modal" data-modalType="request call">
+          <img src="./img/icons/phone.svg" alt="phone" />
+        </button>
+        <button aria-label="Открыть модальное окно 'обратная связь'" title="Обратная связь" class="button icon"
+          data-forceAction="open modal" data-modalType="feedback message">
+          <img src="./img/icons/message.svg" alt="message" />
+        </button>
+        <button aria-label="Перейти к профилю" title="Профиль" class="button icon">
+          <img src="./img/icons/person.svg" alt="person" />
+        </button>
+      </div>
+      <div class="header__icon-wrapper header__repair">
+        <button aria-label="Открыть окно 'Оставить заявку на ремонт'" title="Оставить заявку на ремонт"
+          class="button icon">
+          <img src="./img/icons/repair-request.svg" alt="repair requiest" />
+        </button>
+        <button aria-label="Открыть окно 'Статус ремонта'" title="Статус ремонта" class="button icon">
+          <img src="./img/icons/repair-status.svg" alt="repair status" />
+        </button>
+      </div>
+    </header>
+
+    <aside class="menu">
+      <header class="menu__header">
+        <div class="icons-wrapper">
+          <button aria-label="Закрыть меню" title="Закрыть меню" class="button icon" data-forceAction="close menu">
+            <img src="./img/icons/cancel.svg" alt="close" />
           </button>
         </div>
-        <div class="header__icon-wrapper header__icon-wrapper--main-logo">
+        <div class="icons-wrapper icons-wrapper--grow">
           <div class="icon icon--logo icon--clear-background">
-            <img src="./img/icons/logo.svg" alt="logo" />
+            <img title="CPS Logo" src="./img/icons/logo.svg" alt="CPS Logo" />
           </div>
         </div>
-        <div class="header__icon-wrapper header__contact">
-          <button
-            class="button icon"
-            data-forceAction="open modal"
-            data-modalType="request call"
-          >
+        <div class="icons-wrapper">
+          <button class="button icon" aria-label="Перейти к поиску" title="Поиск">
+            <img src="./img/icons/search.svg" alt="search" />
+          </button>
+        </div>
+      </header>
+      <nav class="navigation" id="nav">
+        <ul>
+          <li class="navigation__link"><a title="Перейти на страницу &#171;Ремонт техники&#187;" href="#">Ремонт
+              техники</a></li>
+          <li class="navigation__link navigation__link--active"><a
+              title="Перейти на страницу &#171;Услуги и сервисы&#187;" href="#">Услуги и сервисы</a></li>
+          <li class="navigation__link"><a title="Перейти на страницу &#171;Корпоративным клиентам&#187;"
+              href="#">Корпоративным клиентам</a></li>
+          <li class="navigation__link"><a title="Перейти на страницу &#171;Продавцам техники&#187;" href="#">Продавцам
+              техники</a></li>
+          <li class="navigation__link"><a title="Перейти на страницу &#171;Партнерам&#187;" href="#">Партнерам</a></li>
+          <li class="navigation__link"><a title="Перейти на страницу &#171;Производителям&#187;"
+              href="#">Производителям</a></li>
+          <li class="navigation__link"><a title="Перейти на страницу &#171;Наши сервисные центры&#187;" href="#">Наши
+              сервисные центры</a></li>
+          <li class="navigation__link"><a  title="Перейти на страницу &#171;Контакты&#187;" href="#">Контакты</a></li>
+        </ul>
+      </nav>
+      <footer class="menu__footer">
+        <div class="icons-wrapper">
+          <button aria-label="Открыть модальное окно 'Заказать звонок'" title="Заказать звонок" class="button icon"
+            data-forceAction="open modal" data-modalType="request call">
             <img src="./img/icons/phone.svg" alt="phone" />
           </button>
-          <button
-            class="button icon"
-            data-forceAction="open modal"
-            data-modalType="feedback message"
-          >
+          <button aria-label="Открыть модальное окно 'Обратная связь'" title="Обратная связь" class="button icon"
+            data-forceAction="open modal" data-modalType="feedback message">
             <img src="./img/icons/message.svg" alt="message" />
           </button>
-          <button class="button icon">
+          <button aria-label="Перейти к профилю" title="Профиль" class="button icon">
             <img src="./img/icons/person.svg" alt="person" />
           </button>
         </div>
-        <div class="header__icon-wrapper header__repair">
-          <button class="button icon">
+        <address class="contacts">
+          <div class="contacts__mail"><a title="Написать на e-mail &#171;mail@cps.com&#187;" class="contacts__mail"
+              href="mailto:mail@cps.com">mail@cps.com</a>
+          </div>
+          <div class="contacts__phone"><a title="Позвонить по номеру &#171;8 800 890 8900&#187;" class="contacts__phone"
+              href="tel:88008908900">8 800 890 8900</a>
+          </div>
+        </address>
+        <aside class="language-select">
+          <a title="Переключиться на русский язык" class="language-select__language language-select__language--active"
+            href="#">RU</a>
+          <a title="Переключиться на английский язык" class="language-select__language" href="#">EN</a>
+          <a title="Переключиться на китайский язык" class="language-select__language" href="#">CH</a>
+        </aside>
+      </footer>
+    </aside>
+    <main class="main-content">
+      <header class="main-content__header">
+        <h1>Услуги и сервисы</h1>
+        <div class="main-content__header-icons">
+          <span class="main-content__header-description">Оставить заявку</span>
+          <button aria-label="Открыть окно 'Оставить заявку на ремонт'" title="Оставить заявку на ремонт"
+            class="button icon">
             <img src="./img/icons/repair-request.svg" alt="repair requiest" />
           </button>
-          <button class="button icon">
+          <span class="main-content__header-description">Статус ремонта</span>
+          <button aria-label="Открыть окно 'Статус ремонта'" aria-label="Статус ремонта" class="button icon">
             <img src="./img/icons/repair-status.svg" alt="repair status" />
           </button>
         </div>
       </header>
+      <article class="additional-info">
+        <ul class="additional-info__list">
+          <li class="additional-info__list-item"><a title="Перейти на страницу &#171;Ремонтируемые бренды&#187;"
+              href="#">Ремонтируемые бренды</a></li>
+          <li class="additional-info__list-item"><a title="Перейти на страницу &#171;Дополнительные услуги&#187;"
+              href="#">Дополнительные услуги</a></li>
+          <li class="additional-info__list-item"><a title="Перейти на страницу &#171;Цены на услуги&#187;" href="#">Цены
+              на услуги</a></li>
+          <li class="additional-info__list-item"><a title="Перейти на страницу &#171;Адреса сервисных центров&#187;"
+              href="#">Адреса сервисных центров</a></li>
+          <li title="Перейти на страницу &#171;Специальные цены&#187;" class="additional-info__list-item"><a
+              href="#">Специальные цены</a></li>
+          <li title="Перейти на страницу &#171;Отзывы&#187;" class="additional-info__list-item"><a href="#">Отзывы</a>
+          </li>
+        </ul>
+      </article>
 
-      <aside class="menu">
-        <header class="menu__header">
-          <div class="icons-wrapper">
-            <button class="button icon" data-forceAction="close menu">
-              <img src="./img/icons/cancel.svg" alt="close" />
-            </button>
+      <section class="about">
+        <div class="about__wrapper">
+          <div class="about__description">
+            <p>Мы являемся авторизованным сервисным центром по ремонту техники
+              Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+              официальной гарантией производителя.</p>
+            <p>
+              Мы успешно работаем с 1992 года и заслужили репутацию надежного
+              партнера, что подтверждает большое количество постоянных
+              клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям
+              и, в свою очередь, советуют нас родным и близким.</p>
           </div>
-          <div class="icons-wrapper icons-wrapper--grow">
-            <div class="icon icon--logo icon--clear-background">
-              <img src="./img/icons/logo.svg" alt="logo" />
-            </div>
-          </div>
-          <div class="icons-wrapper">
-            <button class="button icon">
-              <img src="./img/icons/search.svg" alt="search" />
-            </button>
-          </div>
+          <span class="dropdown">Читать далее</span>
+        </div>
+        <div class="about__image">
+          <img title="CPS фото" src="././img/photo/cps.jpg" alt="cps" />
+        </div>
+      </section>
+
+      <section class="repair-info">
+        <header class="main-content__header repair-info__header">
+          <h2>Ремонт техники различных брендов</h2>
         </header>
-        <nav class="navigation" id="nav">
-          <ul>
-            <li class="navigation__link">Ремонт техники</li>
-            <li class="navigation__link navigation__link--active"
-              >Услуги и сервисы</li
-            >
-            <li class="navigation__link">Корпоративным клиентам</li>
-            <li class="navigation__link">Продавцам техники</li>
-            <li class="navigation__link">Партнерам</li>
-            <li class="navigation__link">Производителям</li>
-            <li class="navigation__link">Наши сервисные центры</li>
-            <li class="navigation__link">Контакты</li>
-          </ul>
-        </nav>
-        <footer class="menu__footer">
-          <div class="icons-wrapper">
-            <button
-              class="button icon"
-              data-forceAction="open modal"
-              data-modalType="request call"
-            >
-              <img src="./img/icons/phone.svg" alt="phone" />
-            </button>
-            <button
-              class="button icon"
-              data-forceAction="open modal"
-              data-modalType="feedback message"
-            >
-              <img src="./img/icons/message.svg" alt="message" />
-            </button>
-            <button class="button icon">
-              <img src="./img/icons/person.svg" alt="person" />
-            </button>
+        <div class="swiper">
+          <div class="swiper-wrapper cards cards__brands">
+            <article class="swiper-slide card">
+              <div class="icon icon--brand icon--clear-background"><img src="././img/brands/lenovo.png" alt="lenovo" />
+              </div>
+              <button aria-label="Перейти к бренду 'Lenovo'" title="Перейти к бренду 'Lenovo'"
+                class="button icon icon--clear-background icon--border"><img src="././img/icons/dropdown.svg"
+                  alt=">" /></button>
+            </article>
+            <article class="swiper-slide card">
+              <div class="icon icon--brand icon--clear-background"><img src="././img/brands/samsung.png"
+                  alt="samsung" /></div>
+              <button aria-label="Перейти к бренду 'Samsung'" title="Перейти к бренду 'Samsung'"
+                class="button icon icon--clear-background icon--border"><img src="././img/icons/dropdown.svg"
+                  alt=">" /></button>
+            </article>
+            <article class="swiper-slide card">
+              <div class="icon icon--brand icon--clear-background"><img src="././img/brands/apple.png" alt="apple" />
+              </div>
+              <button aria-label="Перейти к бренду 'Apple'" title="Перейти к бренду 'Apple'"
+                class="button icon icon--clear-background icon--border"><img src="././img/icons/dropdown.svg"
+                  alt=">" /></button>
+            </article>
+            <article class="swiper-slide card">
+              <div class="icon icon--brand icon--clear-background"><img src="././img/brands/viewsonic.png"
+                  alt="viewsonic" /></div>
+              <button aria-label="Перейти к бренду 'ViewSonic'" title="Перейти к бренду 'ViewSonic'"
+                class="button icon icon--clear-background icon--border"><img src="././img/icons/dropdown.svg"
+                  alt=">" /></button>
+            </article>
+            <article class="swiper-slide card">
+              <div class="icon icon--brand icon--clear-background"><img src="././img/brands/bosch.png" alt="bosch" />
+              </div>
+              <button aria-label="Перейти к бренду 'Bosch'" title="Перейти к бренду 'Bosch'"
+                class="button icon icon--clear-background icon--border"><img src="././img/icons/dropdown.svg"
+                  alt=">" /></button>
+            </article>
+            <article class="swiper-slide card">
+              <div class="icon icon--brand icon--clear-background"><img src="././img/brands/hp.png" alt="hp" />
+              </div>
+              <button aria-label="Перейти к бренду 'HP'" title="Перейти к бренду 'HP'"
+                class="button icon icon--clear-background icon--border"><img src="././img/icons/dropdown.svg"
+                  alt=">" /></button>
+            </article>
+            <article class="swiper-slide card">
+              <div class="icon icon--brand icon--clear-background"><img src="././img/brands/acer.png" alt="acer" />
+              </div>
+              <button aria-label="Перейти к бренду 'Acer'" title="Перейти к бренду 'Acer'"
+                class="button icon icon--clear-background icon--border"><img src="././img/icons/dropdown.svg"
+                  alt=">" /></button>
+            </article>
+            <article class="swiper-slide card">
+              <div class="icon icon--brand icon--clear-background"><img src="././img/brands/sony.png" alt="sony" />
+              </div>
+              <button aria-label="Перейти к бренду 'Sony'" title="Перейти к бренду 'Sony'"
+                class="button icon icon--clear-background icon--border"><img src="././img/icons/dropdown.svg"
+                  alt=">" /></button>
+            </article>
+            <article class="swiper-slide card">
+              <div class="icon icon--brand icon--clear-background"><img src="././img/icons/logo.svg" alt="cps" />
+              </div>
+              <button aria-label="Перейти к бренду 'CPS'" title="Перейти к бренду 'CPS'"
+                class="button icon icon--clear-background icon--border"><img src="././img/icons/dropdown.svg"
+                  alt=">" /></button>
+            </article>
           </div>
-          <address class="contacts">
-            <div class="contacts__mail"
-              ><a class="contacts__mail" href="mailto:mail@cps.com"
-                >mail@cps.com</a
-              >
-            </div>
-            <div class="contacts__phone"
-              ><a class="contacts__phone" href="tel:88008908900"
-                >8 800 890 8900</a
-              >
-            </div>
-          </address>
-          <aside class="language-select">
-            <a
-              class="language-select__language language-select__language--active"
-              href="#"
-              >RU</a
-            >
-            <a class="language-select__language" href="#">EN</a>
-            <a class="language-select__language" href="#">CH</a>
-          </aside>
-        </footer>
-      </aside>
-      <main class="main-content">
-        <header class="main-content__header">
-          <h1>Услуги и сервисы</h1>
-          <div class="main-content__header-icons">
-            <span class="main-content__header-description"
-              >Оставить заявку</span
-            >
-            <button class="button icon">
-              <img src="./img/icons/repair-request.svg" alt="repair requiest" />
-            </button>
-            <span class="main-content__header-description">Статус ремонта</span>
-            <button class="button icon">
-              <img src="./img/icons/repair-status.svg" alt="repair status" />
-            </button>
-          </div>
+          <div class="swiper-pagination"></div>
+          <span class="dropdown">Показать все</span>
+        </div>
+      </section>
+
+      <section class="repair-info">
+        <header class="main-content__header repair-info__header">
+          <h2>Ремонт различных видов техники</h2>
         </header>
-        <article class="additional-info">
-          <ul class="additional-info__list">
-            <li class="additional-info__list-item"
-              ><a href="#">Ремонтируемые бренды</a></li
-            >
-            <li class="additional-info__list-item"
-              ><a href="#">Дополнительные услуги</a></li
-            >
-            <li class="additional-info__list-item"
-              ><a href="#">Цены на услуги</a></li
-            >
-            <li class="additional-info__list-item"
-              ><a href="#">Адреса сервисных центров</a></li
-            >
-            <li class="additional-info__list-item"
-              ><a href="#">Специальные цены</a></li
-            >
-            <li class="additional-info__list-item"><a href="#">Отзывы</a></li>
+        <div class="swiper">
+          <div class="swiper-wrapper cards cards__repair">
+            <article class="swiper-slide card card--big">
+              <div class="card__content">
+                <div class="card__header">
+                  <h3>Ремонт ноутбуков</h3>
+                </div>
+              </div>
+              <div class="card__button">
+                <button aria-label="Открыть окно 'Ремонт ноутбуков'" title="Открыть окно 'Ремонт ноутбуков'"
+                  class="button icon icon--clear-background icon--border"><img src="././img/icons/dropdown.svg"
+                    alt=">" /></button>
+              </div>
+            </article>
+            <article class="swiper-slide card card--big">
+              <div class="card__content">
+                <div class="card__header">
+                  <h3>Ремонт планшетов</h3>
+                </div>
+              </div>
+              <div class="card__button">
+                <button aria-label="Открыть окно 'Ремонт планшетов'" title="Открыть окно 'Ремонт планшетов'"
+                  class="button icon icon--clear-background icon--border"><img src="././img/icons/dropdown.svg"
+                    alt=">" /></button>
+              </div>
+            </article>
+            <article class="swiper-slide card card--big">
+              <div class="card__content">
+                <div class="card__header">
+                  <h3>Ремонт ПК</h3>
+                </div>
+              </div>
+              <div class="card__button">
+                <button aria-label="Открыть окно 'Ремонт персональных компьютеров'"
+                  title="Открыть окно 'Ремонт персональных компьютеров'"
+                  class="button icon icon--clear-background icon--border"><img src="././img/icons/dropdown.svg"
+                    alt=">" /></button>
+              </div>
+            </article>
+            <article class="swiper-slide card card--big">
+              <div class="card__content">
+                <div class="card__header">
+                  <h3>Ремонт мониторов</h3>
+                </div>
+              </div>
+              <div class="card__button">
+                <button aria-label="Открыть окно 'Ремонт мониторов'" title="Открыть окно 'Ремонт мониторов'"
+                  class="button icon icon--clear-background icon--border"><img src="././img/icons/dropdown.svg"
+                    alt=">" /></button>
+              </div>
+            </article>
+            <article class="swiper-slide card card--big">
+              <div class="card__content">
+                <div class="card__header">
+                  <h3>5</h3>
+                </div>
+              </div>
+              <div class="card__button">
+                <button aria-label="Открыть окно '5'" title="Открыть окно '5'"
+                  class="button icon icon--clear-background icon--border"><img src="././img/icons/dropdown.svg"
+                    alt=">" /></button>
+              </div>
+            </article>
+            <article class="swiper-slide card card--big">
+              <div class="card__content">
+                <div class="card__header">
+                  <h3>6</h3>
+                </div>
+              </div>
+              <div class="card__button">
+                <button aria-label="Открыть окно '6'" title="Открыть окно '6'"
+                  class="button icon icon--clear-background icon--border"><img src="././img/icons/dropdown.svg"
+                    alt=">" /></button>
+              </div>
+            </article>
+            <article class="swiper-slide card card--big">
+              <div class="card__content">
+                <div class="card__header">
+                  <h3>7</h3>
+                </div>
+              </div>
+              <div class="card__button">
+                <button aria-label="Открыть окно '7'" title="Открыть окно '7'"
+                  class="button icon icon--clear-background icon--border"><img src="././img/icons/dropdown.svg"
+                    alt=">" /></button>
+              </div>
+            </article>
+            <article class="swiper-slide card card--big">
+              <div class="card__content">
+                <div class="card__header">
+                  <h3>8</h3>
+                </div>
+              </div>
+              <div class="card__button">
+                <button aria-label="Открыть окно '8'" title="Открыть окно '8'"
+                  class="button icon icon--clear-background icon--border"><img src="././img/icons/dropdown.svg"
+                    alt=">" /></button>
+              </div>
+            </article>
+            <article class="swiper-slide card card--big">
+              <div class="card__content">
+                <div class="card__header">
+                  <h3>9</h3>
+                </div>
+              </div>
+              <div class="card__button">
+                <button aria-label="Открыть окно '9'" title="Открыть окно '9'"
+                  class="button icon icon--clear-background icon--border"><img src="././img/icons/dropdown.svg"
+                    alt=">" /></button>
+              </div>
+            </article>
+          </div>
+          <div class="swiper-pagination"></div>
+          <span class="dropdown">Показать все</span>
+        </div>
+      </section>
+      <section class="repair-info">
+        <header class="main-content__header repair-info__header">
+          <h2>Цены на услуги</h2>
+        </header>
+        <div class="swiper">
+          <div class="swiper-wrapper cards">
+            <article class="swiper-slide card card--very-big">
+              <div class="card__content">
+                <div class="card__header">
+                  <h4>Ремонтные услуги</h4>
+                </div>
+                <p class="card__description">Диагностика</p>
+              </div>
+              <div class="card__content">
+                <div class="card__header">
+                  <h4>Цена</h4>
+                </div>
+                <p class="card__description">Бесплатно</p>
+              </div>
+              <div class="card__content">
+                <div class="card__header">
+                  <h4>Срок</h4>
+                </div>
+                <p class="card__description">30 мин</p>
+              </div>
+              <div class="card__button">
+                <button aria-label="Заказать услугу 'Диагностика'" title="Заказать услугу 'Диагностика'" class="button">
+                  <span class="button__value">Заказать</span>
+                  <img class="icon icon--small icon--clear-background" src="./img/icons/dropdown.svg" alt=">" />
+                </button>
+              </div>
+            </article>
+            <article class="swiper-slide card card--very-big">
+              <div class="card__content">
+                <div class="card__header">
+                  <h4>Ремонтные услуги</h4>
+                </div>
+                <p class="card__description">Замена дисплея</p>
+              </div>
+              <div class="card__content">
+                <div class="card__header">
+                  <h4>Цена</h4>
+                </div>
+                <p class="card__description">1000&#x20bd;</p>
+              </div>
+              <div class="card__content">
+                <div class="card__header">
+                  <h4>Срок</h4>
+                </div>
+                <p class="card__description">30-120 мин</p>
+              </div>
+              <div class="card__button">
+                <button aria-label="Заказать услугу 'Замена дисплея'" title="Заказать услугу 'Замена дисплея'"
+                  class="button">
+                  <span class="button__value">Заказать</span>
+                  <img class="icon icon--small icon--clear-background" src="./img/icons/dropdown.svg" alt=">" />
+                </button>
+              </div>
+            </article>
+            <article class="swiper-slide card card--very-big">
+              <div class="card__content">
+                <div class="card__header">
+                  <h4>Ремонтные услуги</h4>
+                </div>
+                <p class="card__description">Замена полифонического динамика</p>
+              </div>
+              <div class="card__content">
+                <div class="card__header">
+                  <h4>Цена</h4>
+                </div>
+                <p class="card__description">1000&#x20bd;</p>
+              </div>
+              <div class="card__content">
+                <div class="card__header">
+                  <h4>Срок</h4>
+                </div>
+                <p class="card__description">30-120 мин</p>
+              </div>
+              <div class="card__button">
+                <button aria-label="Заказать услугу 'Замена полифонического динамика'"
+                  title="Заказать услугу 'Замена полифонического динамика'" class="button">
+                  <span class="button__value">Заказать</span>
+                  <img class="icon icon--small icon--clear-background" src="./img/icons/dropdown.svg" alt=">" />
+                </button>
+              </div>
+            </article>
+            <article class="swiper-slide card card--very-big">
+              <div class="card__content">
+                <div class="card__header">
+                  <h4>Ремонтные услуги</h4>
+                </div>
+                <p class="card__description">Тестирование с выдачей технического заключения</p>
+              </div>
+              <div class="card__content">
+                <div class="card__header">
+                  <h4>Цена</h4>
+                </div>
+                <p class="card__description">1000&#x20bd;</p>
+              </div>
+              <div class="card__content">
+                <div class="card__header">
+                  <h4>Срок</h4>
+                </div>
+                <p class="card__description">30-120 мин</p>
+              </div>
+              <div class="card__button">
+                <button aria-label="Заказать услугу 'Тестирование с выдачей технического заключения'"
+                  title="Заказать услугу 'Тестирование с выдачей технического заключения'" class="button">
+                  <span class="button__value">Заказать</span>
+                  <img class="icon icon--small icon--clear-background" src="./img/icons/dropdown.svg" alt=">" />
+                </button>
+              </div>
+            </article>
+            <article class="swiper-slide card card--very-big">
+              <div class="card__content">
+                <div class="card__header">
+                  <h4>Ремонтные услуги</h4>
+                </div>
+                <p class="card__description">Замена програмного обеспечения</p>
+              </div>
+              <div class="card__content">
+                <div class="card__header">
+                  <h4>Цена</h4>
+                </div>
+                <p class="card__description">1000&#x20bd;</p>
+              </div>
+              <div class="card__content">
+                <div class="card__header">
+                  <h4>Срок</h4>
+                </div>
+                <p class="card__description">30-120 мин</p>
+              </div>
+              <div class="card__button">
+                <button aria-label="Заказать услугу 'Замена програмного обеспечения'"
+                  title="Заказать услугу 'Замена програмного обеспечения'" class="button">
+                  <span class="button__value">Заказать</span>
+                  <img class="icon icon--small icon--clear-background" src="./img/icons/dropdown.svg" alt=">" />
+                </button>
+              </div>
+            </article>
+          </div>
+          <ul class="swiper-pagination">
+            <li class="indicator__item"></li>
           </ul>
-        </article>
+        </div>
+        <div class="repair-info__offer-notice">
+          <p class="main-content__paragraph">Все цены указаны с учетом НДС. Стоимость ремонта указана на
+            единичную услугу. Для получения коммерческого предложения на
+            постоянное обслуживание, оставьте заявку.</p>
+          <a title="Перейти на страницу &#171;Получить коммерческое предложение&#187;" href="#"
+            class="repair-info__more-offers">Получить коммерческое предложение</a>
+        </div>
+      </section>
+      <footer class="footer">
+        <p class="main-content__paragraph footer__paragraph">&copy; 2019 CPS<br />Разработано командой Apesong
+        </p>
+        <a title="Перейти на страницу &#171;Политика конфиденциальностии&#187;" href="#" class="footer__link">Политика
+          конфиденциальностии</a>
+        <p class="main-content__paragraph footer__paragraph">Информация, размещенная на данной странице, не является
+          публичной
+          офертой</p>
+      </footer>
+    </main>
 
-        <section class="about">
-          <div class="about__wrapper">
-            <div class="about__description">
-              <p
-                >Мы являемся авторизованным сервисным центром по ремонту техники
-                Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
-                официальной гарантией производителя.</p
-              >
-              <p>
-                Мы успешно работаем с 1992 года и заслужили репутацию надежного
-                партнера, что подтверждает большое количество постоянных
-                клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям
-                и, в свою очередь, советуют нас родным и близким.</p
-              >
-            </div>
-            <span class="dropdown">Читать далее</span>
-          </div>
-          <div class="about__image">
-            <img src="././img/photo/cps.jpg" alt="cps" />
-          </div>
-        </section>
+    <div class="overlay"></div>
 
-        <section class="repair-info">
-          <header class="main-content__header repair-info__header">
-            <h2>Ремонт техники различных брендов</h2>
-          </header>
-          <div class="swiper">
-            <div class="swiper-wrapper cards cards__brands">
-              <article class="swiper-slide card">
-                <div class="icon icon--brand icon--clear-background"
-                  ><img src="././img/brands/lenovo.png" alt="lenovo"
-                /></div>
-                <button class="button icon icon--clear-background icon--border"
-                  ><img src="././img/icons/dropdown.svg" alt=">"
-                /></button>
-              </article>
-              <article class="swiper-slide card">
-                <div class="icon icon--brand icon--clear-background"
-                  ><img src="././img/brands/samsung.png" alt="samsung"
-                /></div>
-                <button class="button icon icon--clear-background icon--border"
-                  ><img src="././img/icons/dropdown.svg" alt=">"
-                /></button>
-              </article>
-              <article class="swiper-slide card">
-                <div class="icon icon--brand icon--clear-background"
-                  ><img src="././img/brands/apple.png" alt="apple" />
-                </div>
-                <button class="button icon icon--clear-background icon--border"
-                  ><img src="././img/icons/dropdown.svg" alt=">"
-                /></button>
-              </article>
-              <article class="swiper-slide card">
-                <div class="icon icon--brand icon--clear-background"
-                  ><img src="././img/brands/viewsonic.png" alt="viewsonic"
-                /></div>
-                <button class="button icon icon--clear-background icon--border"
-                  ><img src="././img/icons/dropdown.svg" alt=">"
-                /></button>
-              </article>
-              <article class="swiper-slide card">
-                <div class="icon icon--brand icon--clear-background"
-                  ><img src="././img/brands/bosch.png" alt="bosch" />
-                </div>
-                <button class="button icon icon--clear-background icon--border"
-                  ><img src="././img/icons/dropdown.svg" alt=">"
-                /></button>
-              </article>
-              <article class="swiper-slide card">
-                <div class="icon icon--brand icon--clear-background"
-                  ><img src="././img/brands/hp.png" alt="hp" />
-                </div>
-                <button class="button icon icon--clear-background icon--border"
-                  ><img src="././img/icons/dropdown.svg" alt=">"
-                /></button>
-              </article>
-              <article class="swiper-slide card">
-                <div class="icon icon--brand icon--clear-background"
-                  ><img src="././img/brands/acer.png" alt="acer" />
-                </div>
-                <button class="button icon icon--clear-background icon--border"
-                  ><img src="././img/icons/dropdown.svg" alt=">"
-                /></button>
-              </article>
-              <article class="swiper-slide card">
-                <div class="icon icon--brand icon--clear-background"
-                  ><img src="././img/brands/sony.png" alt="sony" />
-                </div>
-                <button class="button icon icon--clear-background icon--border"
-                  ><img src="././img/icons/dropdown.svg" alt=">"
-                /></button>
-              </article>
-              <article class="swiper-slide card">
-                <div class="icon icon--brand icon--clear-background"
-                  ><img src="././img/brands/somebrand.png" alt="some brand" />
-                </div>
-                <button class="button icon icon--clear-background icon--border"
-                  ><img src="././img/icons/dropdown.svg" alt=">"
-                /></button>
-              </article>
-            </div>
-            <div class="swiper-pagination"></div>
-            <span class="dropdown">Показать все</span>
-          </div>
-        </section>
-
-        <section class="repair-info">
-          <header class="main-content__header repair-info__header">
-            <h2>Ремонт различных видов техники</h2>
-          </header>
-          <div class="swiper">
-            <div class="swiper-wrapper cards cards__repair">
-              <article class="swiper-slide card card--big">
-                <div class="card__content">
-                  <div class="card__header">
-                    <h3>Ремонт ноутбуков</h3>
-                  </div>
-                </div>
-                <div class="card__button">
-                  <button
-                    class="button icon icon--clear-background icon--border"
-                    ><img src="././img/icons/dropdown.svg" alt=">"
-                  /></button>
-                </div>
-              </article>
-              <article class="swiper-slide card card--big">
-                <div class="card__content">
-                  <div class="card__header">
-                    <h3>Ремонт планшетов</h3>
-                  </div>
-                </div>
-                <div class="card__button">
-                  <button
-                    class="button icon icon--clear-background icon--border"
-                    ><img src="././img/icons/dropdown.svg" alt=">"
-                  /></button>
-                </div>
-              </article>
-              <article class="swiper-slide card card--big">
-                <div class="card__content">
-                  <div class="card__header">
-                    <h3>Ремонт ПК</h3>
-                  </div>
-                </div>
-                <div class="card__button">
-                  <button
-                    class="button icon icon--clear-background icon--border"
-                    ><img src="././img/icons/dropdown.svg" alt=">"
-                  /></button>
-                </div>
-              </article>
-              <article class="swiper-slide card card--big">
-                <div class="card__content">
-                  <div class="card__header">
-                    <h3>Ремонт мониторов</h3>
-                  </div>
-                </div>
-                <div class="card__button">
-                  <button
-                    class="button icon icon--clear-background icon--border"
-                    ><img src="././img/icons/dropdown.svg" alt=">"
-                  /></button>
-                </div>
-              </article>
-              <article class="swiper-slide card card--big">
-                <div class="card__content">
-                  <div class="card__header">
-                    <h3>5</h3>
-                  </div>
-                </div>
-                <div class="card__button">
-                  <button
-                    class="button icon icon--clear-background icon--border"
-                    ><img src="././img/icons/dropdown.svg" alt=">"
-                  /></button>
-                </div>
-              </article>
-              <article class="swiper-slide card card--big">
-                <div class="card__content">
-                  <div class="card__header">
-                    <h3>6</h3>
-                  </div>
-                </div>
-                <div class="card__button">
-                  <button
-                    class="button icon icon--clear-background icon--border"
-                    ><img src="././img/icons/dropdown.svg" alt=">"
-                  /></button>
-                </div>
-              </article>
-              <article class="swiper-slide card card--big">
-                <div class="card__content">
-                  <div class="card__header">
-                    <h3>7</h3>
-                  </div>
-                </div>
-                <div class="card__button">
-                  <button
-                    class="button icon icon--clear-background icon--border"
-                    ><img src="././img/icons/dropdown.svg" alt=">"
-                  /></button>
-                </div>
-              </article>
-              <article class="swiper-slide card card--big">
-                <div class="card__content">
-                  <div class="card__header">
-                    <h3>8</h3>
-                  </div>
-                </div>
-                <div class="card__button">
-                  <button
-                    class="button icon icon--clear-background icon--border"
-                    ><img src="././img/icons/dropdown.svg" alt=">"
-                  /></button>
-                </div>
-              </article>
-              <article class="swiper-slide card card--big">
-                <div class="card__content">
-                  <div class="card__header">
-                    <h3>9</h3>
-                  </div>
-                </div>
-                <div class="card__button">
-                  <button
-                    class="button icon icon--clear-background icon--border"
-                    ><img src="././img/icons/dropdown.svg" alt=">"
-                  /></button>
-                </div>
-              </article>
-            </div>
-            <div class="swiper-pagination"></div>
-            <span class="dropdown">Показать все</span>
-          </div>
-        </section>
-        <section class="repair-info">
-          <header class="main-content__header repair-info__header">
-            <h2>Цены на услуги</h2>
-          </header>
-          <div class="swiper">
-            <div class="swiper-wrapper cards">
-              <article class="swiper-slide card card--very-big">
-                <div class="card__content">
-                  <div class="card__header">
-                    <h4>Ремонтные услуги</h4>
-                  </div>
-                  <p class="card__description">Диагностика</p>
-                </div>
-                <div class="card__content">
-                  <div class="card__header">
-                    <h4>Цена</h4>
-                  </div>
-                  <p class="card__description">Бесплатно</p>
-                </div>
-                <div class="card__content">
-                  <div class="card__header">
-                    <h4>Срок</h4>
-                  </div>
-                  <p class="card__description">30 мин</p>
-                </div>
-                <div class="card__button">
-                  <button class="button">
-                    <span class="button__value">Заказать</span>
-                    <img
-                      class="icon icon--small icon--clear-background"
-                      src="./img/icons/dropdown.svg"
-                      alt=">"
-                    />
-                  </button>
-                </div>
-              </article>
-              <article class="swiper-slide card card--very-big">
-                <div class="card__content">
-                  <div class="card__header">
-                    <h4>Ремонтные услуги</h4>
-                  </div>
-                  <p class="card__description">Замена дисплея</p>
-                </div>
-                <div class="card__content">
-                  <div class="card__header">
-                    <h4>Цена</h4>
-                  </div>
-                  <p class="card__description">1000&#x20bd;</p>
-                </div>
-                <div class="card__content">
-                  <div class="card__header">
-                    <h4>Срок</h4>
-                  </div>
-                  <p class="card__description">30-120 мин</p>
-                </div>
-                <div class="card__button">
-                  <button class="button">
-                    <span class="button__value">Заказать</span>
-                    <img
-                      class="icon icon--small icon--clear-background"
-                      src="./img/icons/dropdown.svg"
-                      alt=">"
-                    />
-                  </button>
-                </div>
-              </article>
-              <article class="swiper-slide card card--very-big">
-                <div class="card__content">
-                  <div class="card__header">
-                    <h4>Ремонтные услуги</h4>
-                  </div>
-                  <p class="card__description"
-                    >Замена полифонического динамика</p
-                  >
-                </div>
-                <div class="card__content">
-                  <div class="card__header">
-                    <h4>Цена</h4>
-                  </div>
-                  <p class="card__description">1000&#x20bd;</p>
-                </div>
-                <div class="card__content">
-                  <div class="card__header">
-                    <h4>Срок</h4>
-                  </div>
-                  <p class="card__description">30-120 мин</p>
-                </div>
-                <div class="card__button">
-                  <button class="button">
-                    <span class="button__value">Заказать</span>
-                    <img
-                      class="icon icon--small icon--clear-background"
-                      src="./img/icons/dropdown.svg"
-                      alt=">"
-                    />
-                  </button>
-                </div>
-              </article>
-              <article class="swiper-slide card card--very-big">
-                <div class="card__content">
-                  <div class="card__header">
-                    <h4>Ремонтные услуги</h4>
-                  </div>
-                  <p class="card__description"
-                    >Тестирование с выдачей технического заключения</p
-                  >
-                </div>
-                <div class="card__content">
-                  <div class="card__header">
-                    <h4>Цена</h4>
-                  </div>
-                  <p class="card__description">1000&#x20bd;</p>
-                </div>
-                <div class="card__content">
-                  <div class="card__header">
-                    <h4>Срок</h4>
-                  </div>
-                  <p class="card__description">30-120 мин</p>
-                </div>
-                <div class="card__button">
-                  <button class="button">
-                    <span class="button__value">Заказать</span>
-                    <img
-                      class="icon icon--small icon--clear-background"
-                      src="./img/icons/dropdown.svg"
-                      alt=">"
-                    />
-                  </button>
-                </div>
-              </article>
-              <article class="swiper-slide card card--very-big">
-                <div class="card__content">
-                  <div class="card__header">
-                    <h4>Ремонтные услуги</h4>
-                  </div>
-                  <p class="card__description"
-                    >Замена програмного обеспечения</p
-                  >
-                </div>
-                <div class="card__content">
-                  <div class="card__header">
-                    <h4>Цена</h4>
-                  </div>
-                  <p class="card__description">1000&#x20bd;</p>
-                </div>
-                <div class="card__content">
-                  <div class="card__header">
-                    <h4>Срок</h4>
-                  </div>
-                  <p class="card__description">30-120 мин</p>
-                </div>
-                <div class="card__button">
-                  <button class="button">
-                    <span class="button__value">Заказать</span>
-                    <img
-                      class="icon icon--small icon--clear-background"
-                      src="./img/icons/dropdown.svg"
-                      alt=">"
-                    />
-                  </button>
-                </div>
-              </article>
-            </div>
-            <ul class="swiper-pagination">
-              <li class="indicator__item"></li>
-            </ul>
-          </div>
-          <div class="repair-info__offer-notice">
-            <p class="main-content__paragraph"
-              >Все цены указаны с учетом НДС. Стоимость ремонта указана на
-              единичную услугу. Для получения коммерческого предложения на
-              постоянное обслуживание, оставьте заявку.</p
-            >
-            <a href="#" class="repair-info__more-offers"
-              >Получить коммерческое предложение</a
-            >
-          </div>
-        </section>
-        <footer class="footer">
-          <p class="main-content__paragraph footer__paragraph"
-            >&copy; 2019 CPS<br />Разработано командой Apesong
-          </p>
-          <a href="#" class="footer__link">Политика конфиденциальностии</a>
-          <p class="main-content__paragraph footer__paragraph"
-            >Информация, размещенная на данной странице, не является публичной
-            офертой</p
-          >
-        </footer>
-      </main>
-
-      <div class="overlay"></div>
-
-      <aside class="modal">
-        <button class="button icon" data-forceAction="close modal">
-          <img src="././img/icons/cancel.svg" alt=">" />
+    <aside class="modal">
+      <button aria-label="Закрыть модальное окно" title="Закрыть модальное окно" class="button icon"
+        data-forceAction="close modal">
+        <img src="././img/icons/cancel.svg" alt=">" />
+      </button>
+      <form class="form" id="feedback-message" action="#">
+        <h2 class="form__header">Обратная связь</h2>
+        <input class="form__input" type="text" name="name" placeholder="Имя" required autofocus />
+        <input class="form__input" type="tel" name="phone" placeholder="Телефон" required />
+        <input class="form__input" type="email" name="email" placeholder="Электронная почта" required />
+        <textarea class="form__input form__input--textarea" name="message" placeholder="Сообщение"></textarea>
+        <p class="form__agreements">Нажимая “отправить”, вы даете согласие на
+          <a title="Открыть документ &#171;Политика обработки персональных данных&#187;" href="#">обработку персональных
+            данных</a>
+          и соглашаетесь с нашей
+          <a title="Открыть документ &#171;Политика конфиденциальностии&#187;" href="#">политикой конфиденциальности</a>
+        </p>
+        <button aria-label="Отправить форму" title="Отправить форму" type="submit" form="feedback-message"
+          class="button">
+          <span class="button__value">Отправить</span>
+          <img class="icon icon--small icon--clear-background" src="./img/icons/dropdown.svg" alt=">" />
         </button>
-        <form class="form" id="feedback-message" action="#">
-          <h2 class="form__header">Обратная связь</h2>
-          <input
-            class="form__input"
-            type="text"
-            name="name"
-            placeholder="Имя"
-            required
-          />
-          <input
-            class="form__input"
-            type="tel"
-            name="phone"
-            placeholder="Телефон"
-            required
-          />
-          <input
-            class="form__input"
-            type="email"
-            name="email"
-            placeholder="Электронная почта"
-            required
-          />
-          <textarea
-            class="form__input form__input--textarea"
-            name="message"
-            placeholder="Сообщение"
-          ></textarea>
-          <p class="form__agreements"
-            >Нажимая “отправить”, вы даете согласие на
-            <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
-            <a href="#">политикой конфиденциальности</a>
-          </p>
-          <button type="submit" form="feedback-message" class="button">
-            <span class="button__value">Отправить</span>
-            <img
-              class="icon icon--small icon--clear-background"
-              src="./img/icons/dropdown.svg"
-              alt=">"
-            />
-          </button>
-        </form>
-        <form class="form" id="request-call" action="#">
-          <h2 class="form__header">Заказать звонок</h2>
-          <input
-            class="form__input"
-            type="tel"
-            name="phone"
-            placeholder="Телефон"
-            required
-          />
-          <p class="form__agreements"
-            >Нажимая “отправить”, вы даете согласие на
-            <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
-            <a href="#">политикой конфиденциальности</a>
-          </p>
-          <button type="submit" form="request-call" class="button">
-            <span class="button__value">Отправить</span>
-            <img
-              class="icon icon--small icon--clear-background"
-              src="./img/icons/dropdown.svg"
-              alt=">"
-            />
-          </button>
-        </form>
-      </aside>
-    </div>
-  </body>
+      </form>
+      <form class="form" id="request-call" action="#">
+        <h2 class="form__header">Заказать звонок</h2>
+        <input class="form__input" type="tel" name="phone" placeholder="Телефон" required autofocus />
+        <p class="form__agreements">Нажимая “отправить”, вы даете согласие на
+          <a title="Открыть документ &#171;Политика обработки персональных данных&#187;" href="#">обработку персональных
+            данных</a>
+          и соглашаетесь с нашей
+          <a title="Открыть документ &#171;Политика конфиденциальностии&#187;" href="#">политикой конфиденциальности</a>
+        </p>
+        <button aria-label="Отправить форму" title="Отправить форму" type="submit" form="request-call" class="button">
+          <span class="button__value">Отправить</span>
+          <img class="icon icon--small icon--clear-background" src="./img/icons/dropdown.svg" alt=">" />
+        </button>
+      </form>
+    </aside>
+  </div>
+</body>
+
 </html>

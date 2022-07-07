@@ -114,10 +114,12 @@ function forceAction(action, modalType) {
       if (modalType == 'request call') {
         requiestCall.classList.add('form--active')
         feedbackMessage.classList.remove('form--active')
+        requiestCall.getElementsByClassName('form__input')[0].focus();
       }
       if (modalType == 'feedback message') {
         requiestCall.classList.remove('form--active')
         feedbackMessage.classList.add('form--active')
+        feedbackMessage.getElementsByClassName('form__input')[0].focus();
       }
       menu.classList.remove('menu--active')
       modal.classList.add('modal--active')

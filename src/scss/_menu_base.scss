@@ -1,4 +1,6 @@
 .menu {
+  letter-spacing: -0.2px;
+  font-weight: 500;
   transition: all 0.75s ease-in-out;
   padding: 0 8px;
   position: fixed;
@@ -36,6 +38,9 @@
   ul {
     padding: 0;
   }
+
+
+   
   &__link {
     display: block;
     padding: calc(12px - 0.25em) 8px;
@@ -46,6 +51,11 @@
     margin: 0;
     user-select: none;
     color: $text-color-1;
+
+    a{
+      pointer-events: none;
+    }
+
 
     &:hover:not(&--active) {
       &::after {
@@ -76,8 +86,10 @@
     }
 
     &--active {
+      a{
       color: $text-color-2;
       transition: all 0.5s ease;
+      }
 
       &::before {
         background-color: $decoration-color-1;
@@ -91,7 +103,6 @@ address {
 }
 
 a {
-  outline: none;
   text-decoration: none;
   color: $text-color-1;
 }
@@ -108,10 +119,11 @@ a {
   }
 
   &__phone {
+    letter-spacing: -0.6px;
     margin-top: 12px;
     font-size: 24px;
     line-height: 32px;
-    font-weight: bold;
+    font-weight: 700;
   }
 }
 

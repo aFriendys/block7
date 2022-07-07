@@ -53,7 +53,9 @@
   transition: all 0.75s ease;
   user-select: none;
   cursor: pointer;
-
+&__description{
+  letter-spacing: .2px;
+}
   &:hover {
     border: 1px solid $button-color-2;
     .button {

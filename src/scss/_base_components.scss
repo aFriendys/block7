@@ -23,7 +23,6 @@
 }
 
 .additional-info {
-  overflow: auto;
   margin: 24px 16px 0;
   color: $text-color-2;
   font-size: 16px;
@@ -31,9 +30,15 @@
   letter-spacing: -0.2px;
 
   &__list {
+    overflow: auto;
+    margin: 0;
     padding: 0;
     display: flex;
     flex-direction: row;
+
+    &::-webkit-scrollbar{
+      display: none;
+    }
   }
 
   &__list-item {
@@ -85,6 +90,7 @@
 
 .button {
   padding: 0;
+  letter-spacing: -0.15px;
   transition: all 0.25s ease;
   background-color: $button-color-1;
   height: 32px;
@@ -155,6 +161,15 @@
 *::after {
   box-sizing: border-box;
 }
+
+h1{
+  letter-spacing: -0.6px;
+}
+
+h2, h3{
+  letter-spacing: -0.2px;
+}
+
 
 h1,
 h2,

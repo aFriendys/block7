@@ -5,15 +5,9 @@
   &__paragraph {
     transition: all 1s ease;
     margin-top: 16px;
-    overflow: hidden;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.2px;
-    height: unset;
-
-    &--hidden {
-      height: 0;
-    }
   }
 
   &__header {
@@ -30,6 +24,7 @@
     }
 
     &-description {
+      letter-spacing: -0.2px;
       margin-left: 24px;
       font-weight: 500;
       cursor: pointer;
@@ -74,7 +69,8 @@
     color: $text-color-2;
     font-size: 14px;
     line-height: 20px;
-    letter-spacing: 0.2px;
+    letter-spacing: unset;
+    opacity: .72;
   }
 }
 
@@ -83,6 +79,7 @@
   flex-direction: column;
 
   .dropdown {
+    letter-spacing: -0.2px;
     margin: 16px 0;
   }
   &__wrapper {
@@ -104,6 +101,7 @@
     margin-bottom: 16px;
     transition: all 1s ease;
     overflow: hidden;
+    letter-spacing: -0.2px;
   }
 }
 
